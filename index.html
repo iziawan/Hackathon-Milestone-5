@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Form and resume content elements -->
+    <form id="resume-form">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="tel" id="phone" placeholder="Phone" required>
+        <textarea id="education" placeholder="Education" required></textarea>
+        <textarea id="work-experience" placeholder="Work Experience" required></textarea>
+        <input type="text" id="skills" placeholder="Skills (comma separated)" required>
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resume-content"></div>
+    <p id="resume-link"></p>
+    <button id="download-pdf">Download PDF</button>
+
+    <!-- Include html2pdf.js globally -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
