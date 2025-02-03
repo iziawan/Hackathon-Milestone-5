@@ -1,116 +1,219 @@
-/* General reset to remove default margins */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+/* Global Styles */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #2c3e50, #4bcffa);
+  padding: 20px;
+  margin: 0;
+  color: #ffffff;
 }
 
-/* Container Styling */
+/* Container Styles */
 .container {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+  background: #1e272e;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  border: 2px solid #00d2d3;
 }
 
-/* Section Heading */
+/* Header Styles */
+h1,
 h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 5px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #f7f1e3;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  background: -webkit-linear-gradient(45deg, #ffdd59, #ff4757);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-/* Form and Fieldset Styling */
+/* Form Styles */
 form {
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 fieldset {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 15px;
+  margin-bottom: 25px;
+  padding: 25px;
+  border: 2px solid #00d2d3;
+  border-radius: 12px;
+  background-color: #485460;
 }
 
 legend {
-    font-weight: bold;
-    padding: 0 5px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #ffdd59;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ffdd59;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
+input {
+  margin-top: 10px;
+  padding: 12px;
+  border: 2px solid #00d2d3;
+  border-radius: 8px;
+  width: calc(100% - 24px);
+  box-sizing: border-box;
+  background-color: #2f3542;
+  color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-textarea {
-    height: 100px;
+input:focus {
+  border-color: #ffdd59;
+  box-shadow: 0 0 8px #ffdd59;
+  outline: none;
 }
 
-/* Button Styling */
 button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 15px;
+  background-color: #ff4757;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #ff6b81;
+  transform: scale(1.05);
 }
 
-/* Resume Content Styling */
+/* Resume Styles */
+#resume {
+  margin-top: 30px;
+}
+
 #resume-content {
+  background-color: #57606f;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #ffdd59;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(255, 221, 89, 0.6);
+}
+
+#resume-content h3 {
+  margin-top: 0;
+  color: #ffdd59;
+}
+
+#resume-content p,
+#resume-content ul {
+  margin: 10px 0;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 25px;
+  color: #ffffff;
+}
+
+/* Share Section Styles */
+#share-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#shareable-link {
+  display: block;
+  margin: 15px 0;
+  color: #00d2d3;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+#shareable-link:hover {
+  color: #ffdd59;
+  text-decoration: underline;
+}
+
+#copy-link-btn,
+#download-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  background-color: #1e90ff;
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+#copy-link-btn:hover,
+#download-btn:hover {
+  background-color: #00a8ff;
+  box-shadow: 0 0 10px #00d2d3;
+  border-color: #00d2d3;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+
+  form,
+  fieldset {
+    padding: 20px;
+  }
+
+  legend {
+    font-size: 1.2rem;
+  }
+
+  input,
+  button {
+    font-size: 1rem;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    min-height: 200px; /* Ensures there's enough space to see the content */
-    cursor: text; /* Indicates the content is editable */
+  }
+
+  button {
+    margin-top: 10px;
+  }
 }
 
-/* Editable Section Styling */
-#resume-content[contenteditable="true"] {
-    border: 2px dashed #007bff; /* Visual indication that the content is editable */
-}
+@media only screen and (max-width: 480px) {
+  h1,
+  h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
 
-/* Basic Mobile Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-        width: 90%;
-    }
+  input,
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
 
-    h2 {
-        font-size: 22px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea {
-        padding: 12px;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-    }
+  .container {
+    padding: 20px;
+  }
 }
